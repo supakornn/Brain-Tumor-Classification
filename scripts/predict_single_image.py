@@ -77,7 +77,8 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python scripts/predict_single_image.py <image_path> [model_path]")
         print("\nExample:")
-        print("  python scripts/predict_single_image.py data/Testing/glioma_tumor/image.jpg")
+        print("  python scripts/predict_single_image.py data/Testing/glioma/Te-gl_1.jpg")
+        print("\nAvailable folders: glioma, meningioma, notumor, pituitary")
         sys.exit(1)
     
     image_path = sys.argv[1]

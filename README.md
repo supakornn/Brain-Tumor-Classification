@@ -126,11 +126,13 @@ Training time: ~2 hours. Saves model to `models/SimpleCNN_best.h5`.
 
 ### Prediction
 ```bash
-# With uv
-uv run python scripts/predict_single_image.py data/Testing/glioma_tumor/image.jpg
+# With uv (example with actual filename)
+uv run python scripts/predict_single_image.py data/Testing/glioma/Te-gl_1.jpg
 
 # Or with activated venv
-python scripts/predict_single_image.py data/Testing/glioma_tumor/image.jpg
+python scripts/predict_single_image.py data/Testing/glioma/Te-gl_1.jpg
+
+# Available folders: glioma, meningioma, notumor, pituitary
 ```
 
 ## Project Structure
