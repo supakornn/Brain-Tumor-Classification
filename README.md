@@ -50,23 +50,52 @@ SimpleCNN with 10.7M parameters:
 
 ## Installation
 
-### Using uv (Recommended)
+### Step 1: Install UV
 
 Install [uv](https://github.com/astral-sh/uv) if you haven't already:
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Then set up the project:
+### Step 2: Setup Project
+
 ```bash
 # Create virtual environment and install dependencies
 uv sync
-
-# Activate the environment
-source .venv/bin/activate
 ```
 
-### Using pip (Legacy)
+### Step 3: Download Dataset
+
+⚠️ **The dataset (~95MB) is NOT included in this repository.**
+
+Use the automated download script:
+
+```bash
+# Make script executable
+chmod +x download_dataset.sh
+
+# Run the script (it will guide you through the setup)
+./download_dataset.sh
+```
+
+**What the script does:**
+1. Checks UV installation
+2. Sets up virtual environment
+3. Installs Kaggle CLI
+4. Asks for Kaggle credentials (get from: https://www.kaggle.com/settings → API → Create New Token)
+5. Downloads dataset to `./data/`
+6. Shows statistics
+
+**Manual download (alternative):**
+```bash
+uv add kaggle
+mkdir -p ~/.kaggle
+# Create ~/.kaggle/kaggle.json with: {"username":"your_username","key":"your_api_key"}
+chmod 600 ~/.kaggle/kaggle.json
+uv run kaggle datasets download -d masoudnickparvar/brain-tumor-mri-dataset -p ./data --unzip
+```
+
+### Legacy Installation (pip)
 
 ```bash
 pip install -r requirements.txt
