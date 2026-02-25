@@ -141,13 +141,6 @@ python scripts/predict_single_image.py data/Testing/glioma/Te-gl_1.jpg
 - Poor glioma detection (14% recall)
 - Simple architecture inadequate for medical imaging
 
-## Future Work
-
-- Transfer learning (VGG16, ResNet50)
-- Class balancing with weighted loss
-- Advanced data augmentation
-- Ensemble methods
-
 ## Additional Resources
 
 - **Dataset Source**: [Brain Tumor MRI Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
