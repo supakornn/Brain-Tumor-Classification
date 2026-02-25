@@ -1,0 +1,6 @@
+{
+    "model_name": "SimpleCNN",
+    "test_accuracy": 0.37055838108062744,
+    "test_loss": 3.0542335510253906,
+    "timestamp": "2025-11-11 20:59:53"
+}
