@@ -26,10 +26,5 @@ dev = [
     "flake8>=6.0.0",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
 [tool.uv]
-# UV-specific configuration
-managed = true
+package = false
