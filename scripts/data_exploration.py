@@ -16,7 +16,7 @@ plt.rcParams['figure.figsize'] = (15, 10)
 
 TRAIN_DIR = 'data/Training'
 TEST_DIR = 'data/Testing'
-CLASSES = ['glioma_tumor', 'meningioma_tumor', 'no_tumor', 'pituitary_tumor']
+CLASSES = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 def count_images():
     print("=" * 60)

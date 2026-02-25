@@ -12,6 +12,7 @@ from tensorflow import keras
 
 IMG_SIZE = (150, 150)
 CLASSES = ['Glioma Tumor', 'Meningioma Tumor', 'No Tumor', 'Pituitary Tumor']
+# Folder names: glioma, meningioma, notumor, pituitary
 
 def load_and_preprocess_image(image_path):
     img = Image.open(image_path)

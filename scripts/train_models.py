@@ -31,7 +31,7 @@ LEARNING_RATE = 0.0005
 
 TRAIN_DIR = 'data/Training'
 TEST_DIR = 'data/Testing'
-CLASSES = ['glioma_tumor', 'meningioma_tumor', 'no_tumor', 'pituitary_tumor']
+CLASSES = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 def create_data_generators():
     train_datagen = ImageDataGenerator(
