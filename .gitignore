@@ -26,6 +26,10 @@ env/
 ENV/
 .venv
 
+# UV
+.uv/
+uv.lock
+
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb

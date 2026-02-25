@@ -50,6 +50,24 @@ SimpleCNN with 10.7M parameters:
 
 ## Installation
 
+### Using uv (Recommended)
+
+Install [uv](https://github.com/astral-sh/uv) if you haven't already:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then set up the project:
+```bash
+# Create virtual environment and install dependencies
+uv sync
+
+# Activate the environment
+source .venv/bin/activate
+```
+
+### Using pip (Legacy)
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -60,17 +78,29 @@ Requirements: TensorFlow, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, Pill
 
 ### Data Exploration
 ```bash
+# With uv
+uv run python scripts/data_exploration.py
+
+# Or with activated venv
 python scripts/data_exploration.py
 ```
 
 ### Training
 ```bash
+# With uv
+uv run python scripts/train_models.py
+
+# Or with activated venv
 python scripts/train_models.py
 ```
 Training time: ~2 hours. Saves model to `models/SimpleCNN_best.h5`.
 
 ### Prediction
 ```bash
+# With uv
+uv run python scripts/predict_single_image.py data/Testing/glioma_tumor/image.jpg
+
+# Or with activated venv
 python scripts/predict_single_image.py data/Testing/glioma_tumor/image.jpg
 ```
 
@@ -82,7 +112,11 @@ brain-tumor/
 ├── data/                 # MRI images (Training/Testing)
 ├── models/               # Trained models (.h5)
 ├── results/              # Plots and metrics
-└── requirements.txt
+├── pyproject.toml        # UV/Python project configuration
+├── requirements.txt      # Legacy pip dependencies
+├── setup.sh              # Quick setup script (bash/zsh)
+├── setup.fish            # Quick setup script (fish shell)
+└── QUICKSTART_UV.md      # UV usage guide
 ```
 
 ## Limitations
