@@ -1,3 +1,32 @@
+---
+title: Brain Tumor Classification
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: static
+pinned: false
+license: mit
+tags:
+- medical-imaging
+- brain-tumor
+- cnn
+- tensorflow
+- keras
+- image-classification
+- computer-vision
+- healthcare
+- mri-scans
+datasets:
+- brain-tumor-mri-dataset
+metrics:
+- accuracy
+- precision
+- recall
+- f1
+library_name: tensorflow
+pipeline_tag: image-classification
+---
+
 # Brain Tumor Classification
 
 CNN-based classification of brain tumor types from MRI scans.
