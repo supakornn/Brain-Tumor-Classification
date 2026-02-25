@@ -1,6 +1,6 @@
 {
     "model_name": "SimpleCNN",
-    "test_accuracy": 0.37055838108062744,
-    "test_loss": 3.0542335510253906,
-    "timestamp": "2025-11-11 20:59:53"
+    "test_accuracy": 0.7850000262260437,
+    "test_loss": 0.8069755434989929,
+    "timestamp": "2026-02-26 01:03:54"
 }
