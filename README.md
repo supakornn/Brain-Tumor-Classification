@@ -104,4 +104,4 @@ Educational project.
 
 ## This project was developed as part of the course:
 
-Course: INT182 - Fundamentals of Data Science and AI
+Course: INT182 - Data Science and Artificial Intelligence Fundamentals
