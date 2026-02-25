@@ -4,15 +4,17 @@ CNN-based classification of brain tumor types from MRI scans.
 
 ## Dataset
 
-**Source**: Brain Tumor MRI Dataset (Kaggle)
+**Source**: [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset) (Kaggle)
 
-| Class        | Training | Testing | Total |
-|--------------|----------|---------|-------|
-| Glioma       | 826      | 100     | 926   |
-| Meningioma   | 822      | 115     | 937   |
-| No Tumor     | 395      | 105     | 500   |
-| Pituitary    | 827      | 74      | 901   |
-| **Total**    | **2,870**| **394** | **3,264** |
+**Dataset Structure**:
+
+The dataset contains MRI images organized into 4 classes:
+- `glioma` - Glioma brain tumors
+- `meningioma` - Meningioma brain tumors  
+- `notumor` - Healthy brain scans (no tumor)
+- `pituitary` - Pituitary brain tumors
+
+Each class has images split into `Training/` and `Testing/` folders.
 
 ![Dataset Distribution](results/class_distribution.png)
 
@@ -65,8 +67,6 @@ uv sync
 ```
 
 ### Step 3: Download Dataset
-
-⚠️ **The dataset (~95MB) is NOT included in this repository.**
 
 Use the automated download script:
 
@@ -135,21 +135,6 @@ python scripts/predict_single_image.py data/Testing/glioma/Te-gl_1.jpg
 # Available folders: glioma, meningioma, notumor, pituitary
 ```
 
-## Project Structure
-
-```
-brain-tumor/
-├── scripts/              # Python scripts
-├── data/                 # MRI images (Training/Testing)
-├── models/               # Trained models (.h5)
-├── results/              # Plots and metrics
-├── pyproject.toml        # UV/Python project configuration
-├── requirements.txt      # Legacy pip dependencies
-├── setup.sh              # Quick setup script (bash/zsh)
-├── setup.fish            # Quick setup script (fish shell)
-└── QUICKSTART_UV.md      # UV usage guide
-```
-
 ## Limitations
 
 - Low accuracy (46.70%) insufficient for clinical use
@@ -163,10 +148,11 @@ brain-tumor/
 - Advanced data augmentation
 - Ensemble methods
 
+## Additional Resources
+
+- **Dataset Source**: [Brain Tumor MRI Dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
+- **Repository**: [GitHub](https://github.com/supakornn/brain-tumor-classification)
+
 ## License
 
-Educational project.
-
-## This project was developed as part of the course:
-
-Course: INT182 - Data Science and Artificial Intelligence Fundamentals
+MIT License - Educational and research purposes.
