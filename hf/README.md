@@ -1,6 +1,35 @@
-# Brain Tumor Classification
+---
+title: Brain Tumor Classification
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: static
+pinned: false
+license: mit
+language:
+- en
+tags:
+- medical-imaging
+- brain-tumor
+- cnn
+- tensorflow
+- keras
+- image-classification
+- computer-vision
+- healthcare
+- mri-scans
+datasets:
+- brain-tumor-mri-dataset
+metrics:
+- accuracy
+- precision
+- recall
+- f1
+library_name: tensorflow
+pipeline_tag: image-classification
+---
 
-[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-supakornn%2FBrain--Tumor--Classification-yellow)](https://huggingface.co/supakornn/Brain-Tumor-Classification)
+# Brain Tumor Classification
 
 CNN-based classification of brain tumor types from MRI scans.
 
@@ -44,63 +73,17 @@ SimpleCNN with 10.7M parameters:
 
 ![Confusion Matrix](images/confusion_matrix_finetuned_normalized.png)
 
-## Installation
-
-### Step 1: Install UV
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-### Step 2: Setup Project
-
-```bash
-uv sync
-```
-
-### Step 3: Download Dataset
-
-```bash
-chmod +x download_dataset.sh
-./download_dataset.sh
-```
-
-The script checks UV, installs Kaggle CLI, prompts for credentials, and downloads to `./data/`.
-
-**Manual alternative:**
-```bash
-uv add kaggle
-mkdir -p ~/.kaggle
-# Create ~/.kaggle/kaggle.json: {"username":"your_username","key":"your_api_key"}
-chmod 600 ~/.kaggle/kaggle.json
-uv run kaggle datasets download -d masoudnickparvar/brain-tumor-mri-dataset -p ./data --unzip
-```
-
 ## Usage
 
-```bash
-make visualize   # generate data exploration images
-make train       # train model (~2 hours, saves to models/)
-make publish     # push to GitHub + HuggingFace
+```python
+from tensorflow import keras
+
+model = keras.models.load_model("model/SimpleCNN_best.h5")
 ```
 
-### Individual commands
+## GitHub
 
-```bash
-uv run python scripts/data_exploration.py
-uv run python scripts/train_models.py
-uv run python scripts/predict_single_image.py data/Testing/glioma/Te-gl_1.jpg
-```
-
-## Model Weights
-
-Weights hosted on HuggingFace: [supakornn/Brain-Tumor-Classification](https://huggingface.co/supakornn/Brain-Tumor-Classification)
-
-```bash
-# Download model weights
-git clone https://huggingface.co/supakornn/Brain-Tumor-Classification hf-model
-cp hf-model/model/*.h5 models/
-```
+[![GitHub](https://img.shields.io/badge/GitHub-supakornn%2Fbrain--tumor--classification-black?logo=github)](https://github.com/supakornn/brain-tumor-classification)
 
 ## Limitations
 

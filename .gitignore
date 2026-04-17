@@ -45,9 +45,8 @@ uv.lock
 .DS_Store
 Thumbs.db
 
-# Model files (too large for GitHub)
-models/*.h5
-models/*.hdf5
+# Model weights (too large for GitHub)
+model/
 
 # Large result files (optional)
 # results/*.png
