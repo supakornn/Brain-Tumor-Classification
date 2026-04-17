@@ -14,8 +14,8 @@ push-github:
 	git push origin main
 
 push-hf:
-	huggingface-cli upload $(HF_REPO) hf/README.md README.md --repo-type model
-	huggingface-cli upload $(HF_REPO) images/ images/ --repo-type model
-	huggingface-cli upload $(HF_REPO) model/ model/ --repo-type model
+	hf upload $(HF_REPO) hf/README.md README.md --repo-type model
+	hf upload $(HF_REPO) images/ images/ --repo-type model
+	hf upload $(HF_REPO) model/ model/ --repo-type model
 
 publish: push-github push-hf
